@@ -6,6 +6,7 @@
     padding: 0%;
     font-family: 'Caveat', 'Courier New', Courier, monospace;
     font-size: 24px;
+    color: #0FDB54;
 }
 /*.container {
     display: grid;
@@ -49,7 +50,7 @@ footer {
 }
 
 header{
-    flex: 0.04 1 auto;
+    height: 60px;
     background-image: url('../img/paredeTerra.png');
     background-size: cover;
     background-position: center;
@@ -62,15 +63,105 @@ header{
 }
 
 nav {
-    flex: 0.02 1 auto;
-    background-color: aqua;
+    height: 40px;
+    background-image: url(../img/parede\ de\ folhas\ vivas.png);
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+a{
+    text-decoration: none;
 }
 
 main {
     flex: 1;
-    background-color: black;
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 50px 15px 50px;
+    gap: 15px;
 }
 
+
 footer {
-    flex: 0.03 1 auto;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 90%;
+    height: auto; /* Ajusta a altura para o conteúdo */
+    border: 3px solid #0FDB54;
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas flexíveis */
+    grid-template-areas: 
+        "nome data"
+        "opcao informacao"
+        "opcao informacao"
+        "opcao informacao"
+        "imagem imagem"
+        "button button";
+    gap: 10px;
+}
+
+.nome-form {
+    display: flex;
+    flex-direction: column;
+    grid-area: nome;
+}
+
+.data-form {
+    display: flex;
+    flex-direction: column;
+    grid-area: data;
+}
+
+.opcao-form {
+    display: flex;
+    flex-direction: column;
+    grid-area: opcao;
+    align-items: center;
+}
+
+.fauna{
+    display: flex;
+    flex-direction: row;
+}
+
+.informacao-form {
+    display: flex;
+    flex-direction: column;
+    grid-area: informacao;
+}
+
+.image-form {
+    display: flex;
+    flex-direction: column;
+    grid-area: imagem;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    grid-area: button;
+    padding: 10px;
+    background-color: #353535;
+    border: 2px solid #0FDB54;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0FB43A;
+    color: aliceblue;
 }
