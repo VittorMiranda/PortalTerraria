@@ -8,48 +8,41 @@
 </head>
 <body>
     <div class="container">
-        <header><img src="img/logo2-removebg-preview.png" alt="" width="200px"></header>
-        <nav><a href="./index.html">Inicio</a> <a href="./fauna.html">Fauna</a> <a href="./flora.html">Flora</a> <a href="./formulario.html">Atualizações</a></nav>
+        <header><a href="./index.html"><img src="img/logo2-removebg-preview.png" alt="" width="200px"></a></header>
+        <nav><a href="./fauna.html">Fauna</a> <a href="./flora.html">Flora</a> <a href="./formulario.html">Atualizações</a></nav>
         <main>
             <h1>Formulario de para novas atualizações</h1>
             
-            <div class="form">
-                <form action="">
-                    <section class="nome-form">
-                        <label for="nome">Nome:</label>
-                        <input type="text" name="nome" id="nome" class="nome">
-                    </section>
             
-                    <section class="data-form">
-                        <label for="data-atualizacao">Data da atualização:</label>
-                        <input type="date" name="data" id="data-atualizacao" class="data-atualizacao">
-                    </section>
+            <form action="" class="form">
+                  
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" class="nome">
+                 
             
-                    <section class="opcao-form">
-                        <p>Atualização de Fauna ou Flora?</p>
-                        <div>
-                            <label for="fauna" >Fauna</label>
-                            <input type="radio" name="escolha" id="fauna" class="fauna">
-                        </div>
-                        <div>
-                            <label for="flora" >Flora</label>
-                            <input type="radio" name="escolha" id="flora" class="flora">
-                        </div>
-                    </section>
+                    
+                <label for="data-atualizacao" class="data-label">Data da atualização:</label>
+                <input type="date" name="data" id="data-atualizacao" class="data-atualizacao">
+                 
             
-                    <section class="informacao-form">
-                        <label for="informacoes">Informações:</label>
-                        <textarea name="informacoes" id="informacoes" class="informacoes"></textarea>
-                    </section>
+                <p class="pergunta-opcao">Atualização de Fauna ou Flora?</p>
+                     
+                <label for="fauna" class="fauna-label">Fauna</label>
+                <input type="radio" name="escolha" id="fauna" class="fauna">
+                     
+                <label for="flora" class="flora-label">Flora</label>
+                <input type="radio" name="escolha" id="flora" class="flora">
+                 
             
-                    <section class="image-form">
-                        <label for="upload">Upload da Imagem:</label>
-                        <input type="file" name="upload" id="upload" class="upload">
-                    </section>
-            
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+                 
+                <label for="informacoes" class="informacoes-label">Informações:</label>
+                <textarea name="informacoes" id="informacoes" class="informacoes" rows="5" cols="50"></textarea>
+          
+                <label for="upload" class="upload-label">Upload da Imagem:</label>
+                <input type="file" name="upload" id="upload" class="upload">
+                   
+                <button type="submit">Enviar</button>
+            </form>
             
     </main>
         <footer>creditos</footer>

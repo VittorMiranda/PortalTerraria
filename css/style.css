@@ -8,38 +8,6 @@
     font-size: 24px;
     color: #0FDB54;
 }
-/*.container {
-    display: grid;
-    width: 100%;
-    grid-auto-rows: 45px;
-    background-color: aqua;
-    
-    
-}
-
-header {
-    
-    background-color: gray;
-    grid-row: 1 / 3;
-}
-
-nav {
-
-    background-color: green;
-    grid-row: 3;
-}
-
-main {
-    
-    background-color: red;
-    grid-row: 4 / 12;
-}
-
-footer {
- 
-    background-color: blueviolet;
-    grid-row: 12;
-}*/
 
 .container {
     display: flex;
@@ -82,6 +50,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     padding: 15px 50px 15px 50px;
     gap: 15px;
 }
@@ -93,68 +62,121 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+h1{
+    font-size: 40px;
 }
 
 .form {
-    width: 90%;
+    width: 60%;
     height: auto; /* Ajusta a altura para o conteúdo */
     border: 3px solid #0FDB54;
     border-radius: 5px;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas flexíveis */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Duas colunas flexíveis */
     grid-template-areas: 
-        "nome data"
-        "opcao informacao"
-        "opcao informacao"
-        "opcao informacao"
-        "imagem imagem"
-        "button button";
-    gap: 10px;
+        "nome-label nome-label data-label data-label"
+        "nome nome data data"
+        "pergunta pergunta informacoes-label informacoes-label"
+        "fauna-label fauna informacoes informacoes"
+        "flora-label flora informacoes informacoes"
+        "upload-label upload-label informacoes informacoes"
+        "upload upload informacoes informacoes"
+        ". button button .";
+    gap: 20px;
 }
 
-.nome-form {
+.nome{
     display: flex;
     flex-direction: column;
     grid-area: nome;
+    border:2px solid #0FDB54;
+    border-radius: 5px;
+    max-width: 600px;
 }
 
-.data-form {
+.data-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: data-label;
+}
+.data-atualizacao {
     display: flex;
     flex-direction: column;
     grid-area: data;
+    max-width: 300px;
+    border:2px solid #0FDB54;
+    border-radius: 5px;
 }
 
-.opcao-form {
+.pergunta-opcao{
     display: flex;
     flex-direction: column;
-    grid-area: opcao;
+    grid-area: pergunta;
+    align-items: center; 
+}
+.fauna-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: fauna-label;
+    align-items: center;
+}
+.fauna {
+    display: flex;
+    flex-direction: column;
+    grid-area: fauna;
     align-items: center;
 }
 
-.fauna{
-    display: flex;
-    flex-direction: row;
-}
-
-.informacao-form {
+.flora-label {
     display: flex;
     flex-direction: column;
-    grid-area: informacao;
+    grid-area: flora-label;
+    align-items: center;
 }
-
-.image-form {
+.flora {
     display: flex;
     flex-direction: column;
-    grid-area: imagem;
+    grid-area: flora;
+    align-items: center;
+}
+
+
+.informacoes-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: informacoes-label;
+}
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    grid-area: informacoes;
+    border:2px solid #0FDB54;
+    border-radius: 5px;
+    max-width: 600px;
+    resize: none;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    grid-area: upload-label;
+}
+.upload {
+    display: flex;
+    flex-direction: column;
+    grid-area: upload;
+    font-size: 16px;
 }
 
 button {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
+    width: 100%;
     grid-area: button;
     padding: 10px;
+    margin: 10px;
     background-color: #353535;
     border: 2px solid #0FDB54;
     border-radius: 5px;
@@ -165,3 +187,52 @@ button:hover {
     background-color: #0FB43A;
     color: aliceblue;
 }
+
+.card {
+    min-width: 220px;
+    max-width: 220px;
+    height: 300px;
+    border: 3px solid #0FDB54;
+    border-radius: 10px;
+    background-image: url('../img/fundoMontanhas.png');
+    background-size: cover;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #353535;
+    
+    
+}
+
+.titulo-card {
+    width: 100%;
+    height: 32px;
+    background-image: url('../img/images.png');
+    background-size: cover;
+    color:#353535;
+    text-align: center;
+
+    
+    
+}
+
+.conteudo-card {
+    width: 100%;
+    height: 100px;
+    background-image: url('../img/images.png');
+    background-size: contain;
+    color:#353535;
+    
+   
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
