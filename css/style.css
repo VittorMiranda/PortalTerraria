@@ -219,14 +219,22 @@ button:hover {
 }
 
 .conteudo-card {
-    width: 100%;
+    width: 90%;
     height: 100px;
     background-image: url('../img/images.png');
     background-size: contain;
     color:#353535;
-    
-   
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    overflow: auto;
+    scrollbar-width: thin;
+        
+  
 }
+
+
+
 
 .cards {
     width: 100%;
@@ -235,4 +243,5 @@ button:hover {
     justify-content: center;
     gap: 20px;
 }
+
 
