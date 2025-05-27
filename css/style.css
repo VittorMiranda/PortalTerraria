@@ -197,6 +197,7 @@ button:hover {
     background-image: url('../img/fundoMontanhas.png');
     background-size: cover;
     padding: 10px 0;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
