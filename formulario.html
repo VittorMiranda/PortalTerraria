@@ -28,10 +28,10 @@
                 <p class="pergunta-opcao">Atualização de Fauna ou Flora?</p>
                      
                 <label for="fauna" class="fauna-label">Fauna</label>
-                <input type="radio" name="escolha" id="fauna" class="fauna">
+                <input type="radio" name="escolha" id="fauna" class="fauna" value="fauna">
                      
                 <label for="flora" class="flora-label">Flora</label>
-                <input type="radio" name="escolha" id="flora" class="flora">
+                <input type="radio" name="escolha" id="flora" class="flora" value="flora">
                  
             
                  
@@ -39,13 +39,14 @@
                 <textarea name="informacoes" id="informacoes" class="informacoes" rows="5" cols="50"></textarea>
           
                 <label for="upload" class="upload-label">Upload da Imagem:</label>
-                <input type="file" name="upload" id="upload" class="upload">
+                <input type="file" name="upload" id="upload" class="upload" accept="img/*">
                    
-                <button type="submit">Enviar</button>
+                <button type="" onclick="dados()">Enviar</button>
             </form>
-            
+            <div id="temp"></div>
     </main>
         <footer>creditos</footer>
     </div>
 </body>
+<script src="scripts/forms.js"></script>
 </html>
