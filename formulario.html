@@ -14,7 +14,7 @@
             <h1>Formulario de para novas atualizações</h1>
             
             
-            <form action="#" class="form">
+            <form action="#" class="form" onsubmit="dados(event)">
                   
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" class="nome">
@@ -41,7 +41,7 @@
                 <label for="upload" class="upload-label">Upload da Imagem: JPEG* PNG*</label>
                 <input type="file" name="upload" id="upload" class="upload" accept="img/*">
                    
-                <button type="" onclick="dados()">Enviar</button>
+                <button type="submit" >Enviar</button>
             </form>
             <div id="temp"></div>
     </main>
