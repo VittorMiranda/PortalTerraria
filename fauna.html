@@ -9,7 +9,14 @@
 <body>
     <div class="container">
         <header><a href="./index.html"><img src="img/logo2-removebg-preview.png" alt="" width="200px"></a></header>
-        <nav><a href="./fauna.html">Fauna</a> <a href="./flora.html">Flora</a> <a href="./formulario.html">Atualizações</a></nav>
+        <nav>
+            <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>  <!-- ícone hamburguer -->
+            <div id="menu" class="menu">
+              <a href="./fauna.html">Fauna</a>
+              <a href="./flora.html">Flora</a>
+              <a href="./formulario.html">Atualizações</a>
+            </div>
+          </nav>
         <main>
             <section class="cards">
                 <div class="card">
@@ -506,4 +513,5 @@
         </footer>
     </div>
 </body>
+<script src="scripts/menu.js"></script>
 </html>

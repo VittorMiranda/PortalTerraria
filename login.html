@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Loguin</title>
+</head>
+<body>
+    <div class="container">
+        <header><a href="./index.html"><img src="img/logo2-removebg-preview.png" alt="" width="200px"></a></header>
+        <nav>
+            <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>  <!-- ícone hamburguer -->
+            <div id="menu" class="menu">
+              <a href="./fauna.html">Fauna</a>
+              <a href="./flora.html">Flora</a>
+              <a href="./formulario.html">Atualizações</a>
+            </div>
+          </nav>
+        <main>
+            <h1 id="titulo">Login</h1>
+            
+            
+            <form id="form-login" onsubmit="login(event)">
+                <label for="user">Nome:</label>
+                <input type="text" id="user" required>
+              
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+              
+                <button type="submit">Logar</button>
+                <a href="#" onclick="mostrarCadastro()" id="cadastro-link">Cadastro</a>
+              </form>
+              
+              <form id="form-cadastro" onsubmit="cadastro(event)" style="display:none;">
+                <label for="nome-cadastro">Nome:</label>
+                <input type="text" id="nome-cadastro" required>
+              
+                <label for="senha-cadastro">Senha:</label>
+                <input type="password" id="senha-cadastro" required>
+              
+                <label for="confirma-senha-cadastro">Confirmar Senha:</label>
+                <input type="password" id="confirma-senha-cadastro" required>
+              
+                <button type="submit">Cadastrar</button>
+                <a href="#" onclick="mostrarLogin()" id="cadastro-link">Voltar ao Login</a>
+              </form>
+              
+    </main>
+    <footer>
+        <img src="./img/Github.png" alt="" width="26px">
+        <a href="https://github.com/VittorMiranda" target="_blank">@VittorMiranda</a>
+    </footer>
+    </div>
+</body>
+<script src="scripts/loginCadastro.js"></script>
+<script src="scripts/menu.js"></script>
+</html>

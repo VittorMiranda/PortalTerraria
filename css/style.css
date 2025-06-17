@@ -6,14 +6,15 @@
     padding: 0%;
     font-family: 'Caveat', 'Courier New', Courier, monospace;
     font-size: 24px;
-    color: #0FDB54;
+    color: #0FDB54; 
+    
 }
 
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100vh;    
     
 }
 
@@ -34,14 +35,23 @@ nav {
     height: 40px;
     background-image: url(../img/parede\ de\ folhas\ vivas.png);
     display: flex;
-    flex-direction: initial;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;     
     
 }
 
-a{
+.menu {
+    display: flex; /* Mostrar menu no desktop */
+    gap: 20px;     /* Espaçamento entre links */
+    
+}
+
+.menu a {
     text-decoration: none;
+    color: white;
+    padding: 0 40px;
 }
 
 main {
@@ -89,13 +99,28 @@ h1{
     gap: 20px;
 }
 
-.nome{
+form#form-login, form#form-cadastro {
+    width: 80%;
+    max-width: 600px;
+    height: auto; /* Ajusta a altura para o conteúdo */
+    border: 3px solid #0FDB54;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.nome, #user, #senha, #nome-cadastro, #senha-cadastro, #confirma-senha-cadastro{
     display: flex;
     flex-direction: column;
     grid-area: nome;
     border:2px solid #0FDB54;
     border-radius: 5px;
+    width: 90%;
     max-width: 600px;
+    margin: 20px;
 }
 
 .data-label {
@@ -173,7 +198,8 @@ h1{
 }
 
 button {
-    width: 100%;
+    width: 97%;
+    max-width: 600px;
     grid-area: button;
     padding: 10px;
     margin: 10px;
@@ -181,6 +207,7 @@ button {
     border: 2px solid #0FDB54;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 button:hover {
@@ -224,7 +251,7 @@ button:hover {
     height: 100px;
     background-image: url('../img/images.png');
     background-size: contain;
-    color:#353535;
+    color:hsl(0, 0%, 21%);
     font-size: 18px;
     text-align: center;
     padding: 10px;
@@ -234,8 +261,13 @@ button:hover {
   
 }
 
-
-
+#temp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
 .cards {
     width: 100%;
@@ -245,4 +277,61 @@ button:hover {
     gap: 20px;
 }
 
+#titulo {
+    background: 
+  linear-gradient(to right, 
+    hsl(0, 0%, 21%), /* cor mais forte na borda esquerda */
+    hsl(202, 4%, 40%) 50%, /* cor base no centro */
+    hsl(0, 0%, 21%) /* cor mais forte na borda direita */
+  );
+    width: 100%;
+    text-align: center;
+}
 
+#cadastro-link {
+    text-decoration: underline;
+}
+
+
+
+
+  
+  /* botão hamburguer escondido no desktop */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    color: white;
+}  
+   
+  /* media query para telas menores que 700px */
+  @media (max-width: 700px) {
+    nav {
+        justify-content: flex-start; /* ou center, dependendo do design desejado */
+        padding-left: 10px; /* opcional, pra dar espaçamento do botão */
+    }
+
+    #menu-toggle {
+      display: block;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #078d34;;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .menu a {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
+    }
+    .menu.show {
+      display: flex;
+    }
+}

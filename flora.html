@@ -9,12 +9,19 @@
 <body>
     <div class="container">
         <header><a href="./index.html"><img src="img/logo2-removebg-preview.png" alt="" width="200px"></a></header>
-        <nav><a href="./fauna.html">Fauna</a> <a href="./flora.html">Flora</a> <a href="./formulario.html">Atualizações</a></nav>
+        <nav>
+            <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>  <!-- ícone hamburguer -->
+            <div id="menu" class="menu">
+              <a href="./fauna.html">Fauna</a>
+              <a href="./flora.html">Flora</a>
+              <a href="./formulario.html">Atualizações</a>
+            </div>
+          </nav>
         <main>
             <section class="cards">
                 <div class="card">
                     <h3 class="titulo-card">Grama</h3>
-                    <img src="./img/Squirrel 1.png" alt="" class="imagem-card" id="grama">
+                    <img src="./img/flora/Grass.png" alt="" class="imagem-card" id="grama">
                     <p class="conteudo-card">
                         A grama permite o crescimento de muitas plantas e cobre a maior parte da 
                         paisagem acima do solo. Existem sete tipos de grama: grama normal, grama 
@@ -24,7 +31,7 @@
                 </div>
                 <div class="card">
                     <h3 class="titulo-card">Musgo</h3>
-                    <img src="./img/Squirrel 1.png" alt="" class="imagem-card" id="musgo" width="25">
+                    <img src="./img/flora/Argon_Moss.png" alt="" class="imagem-card" id="musgo" width="25">
                     <p class="conteudo-card">
                         Musgo é uma planta semelhante à grama que cresce em Blocos de Pedra. Ele 
                         vem em várias cores diferentes e pode ser encontrado aleatoriamente em 
@@ -495,4 +502,5 @@
     </div>
 </body>
 <script src="scripts/trocaImagens.js"></script>
+<script src="scripts/menu.js"></script>
 </html>
