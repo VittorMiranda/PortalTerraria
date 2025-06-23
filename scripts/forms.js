@@ -5,12 +5,12 @@ document.getElementById('upload').addEventListener('change', function (event) {
   const arquivo = event.target.files[0];
 
   if (arquivo) {
-    imagemPronta = false; // bloqueia envio
+    imagemPronta = false;
     const reader = new FileReader();
 
     reader.onload = function (e) {
       imagemBase64 = e.target.result;
-      imagemPronta = true; // imagem carregada
+      imagemPronta = true;
     };
 
     reader.readAsDataURL(arquivo);
@@ -20,7 +20,6 @@ document.getElementById('upload').addEventListener('change', function (event) {
 function dados(event) {
   event.preventDefault();
 
-  // se a imagem ainda estiver carregando, avisa o usuário
   if (!imagemPronta) {
     alert("Aguarde o carregamento da imagem antes de enviar.");
     return;
@@ -31,8 +30,7 @@ function dados(event) {
   const informacao = document.getElementById("informacoes").value;
 
   let escolha = '';
-  const tipos = document.getElementsByName("escolha");
-  tipos.forEach(tipo => {
+  document.getElementsByName("escolha").forEach(tipo => {
     if (tipo.checked) {
       escolha = tipo.value;
     }
@@ -40,6 +38,25 @@ function dados(event) {
 
   const imagemFinal = imagemBase64 || '';
 
+  // Criar objeto com os dados
+  const novoRegistro = {
+    nome,
+    dataAtualizada,
+    informacao,
+    escolha,
+    imagem: imagemFinal
+  };
+
+  // Recupera os dados salvos anteriormente ou inicializa com array vazio
+  const registrosExistentes = JSON.parse(localStorage.getItem("atualizacoes")) || [];
+
+  // Adiciona novo registro
+  registrosExistentes.push(novoRegistro);
+
+  // Salva de volta no localStorage
+  localStorage.setItem("atualizacoes", JSON.stringify(registrosExistentes));
+
+  // Exibir no DOM (opcional)
   document.getElementById("temp").innerHTML = `
     <div class="card">
       <h3 class="titulo-card">${nome}</h3>
@@ -47,6 +64,8 @@ function dados(event) {
       <p class="conteudo-card">${informacao}</p>
     </div>
   `;
-};
 
-
+  // Opcional: limpar o formulário
+  document.querySelector(".form").reset();
+  imagemBase64 = null;
+}

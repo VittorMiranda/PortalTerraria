@@ -1,63 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Formulario</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Formulário</title>
 </head>
 <body>
-    <div class="container">
-        <header><a href="./index.html"><img src="img/logo2-removebg-preview.png" alt="" width="200px"></a></header>
-        <nav>
-            <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>  <!-- ícone hamburguer -->
-            <div id="menu" class="menu">
-              <a href="./fauna.html">Fauna</a>
-              <a href="./flora.html">Flora</a>
-              <a href="./formulario.html">Atualizações</a>
-            </div>
-          </nav>
-        <main>
-            <h1>Formulario de para novas atualizações</h1>
-            
-            
-            <form action="#" class="form" onsubmit="dados(event)">
-                  
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" class="nome">
-                 
-            
-                    
-                <label for="data-atualizacao" class="data-label">Data da atualização:</label>
-                <input type="date" name="data" id="data-atualizacao" class="data-atualizacao">
-                 
-            
-                <p class="pergunta-opcao">Atualização de Fauna ou Flora?</p>
-                     
-                <label for="fauna" class="fauna-label">Fauna</label>
-                <input type="radio" name="escolha" id="fauna" class="fauna" value="fauna">
-                     
-                <label for="flora" class="flora-label">Flora</label>
-                <input type="radio" name="escolha" id="flora" class="flora" value="flora">
-                 
-            
-                 
-                <label for="informacoes" class="informacoes-label">Informações:</label>
-                <textarea name="informacoes" id="informacoes" class="informacoes" rows="5" cols="50"></textarea>
-          
-                <label for="upload" class="upload-label">Upload da Imagem: JPEG* PNG*</label>
-                <input type="file" name="upload" id="upload" class="upload" accept="img/*">
-                   
-                <button type="submit" >Enviar</button>
-            </form>
-            <div id="temp"></div>
+  <div class="container">
+    <header>
+      <a href="./index.html">
+        <img src="img/logo2-removebg-preview.png" alt="Logo" width="200" />
+      </a>
+    </header>
+
+    <nav>
+      <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <div id="menu" class="menu">
+        <a href="./fauna.html">Fauna</a>
+        <a href="./flora.html">Flora</a>
+        <a href="./formulario.html">Atualizações</a>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Formulário para novas atualizações</h1>
+
+      <form action="#" class="form" onsubmit="dados(event)">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" id="nome" class="nome" />
+        </div>
+
+        <div class="form-group">
+          <label for="data-atualizacao">Data da atualização:</label>
+          <input type="date" name="data" id="data-atualizacao" class="data-atualizacao" />
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Atualização de Fauna ou Flora?</legend>
+
+          <div class="radio-group">
+            <label for="fauna" class="radio-label">
+              <input type="radio" name="escolha" id="fauna" class="fauna" value="fauna" />
+              Fauna
+            </label>
+
+            <label for="flora" class="radio-label">
+              <input type="radio" name="escolha" id="flora" class="flora" value="flora" />
+              Flora
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="informacoes">Informações:</label>
+          <textarea name="informacoes" id="informacoes" class="informacoes" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="upload">Upload da Imagem: JPEG* PNG*</label>
+          <input type="file" name="upload" id="upload" class="upload" accept="image/jpeg, image/png" />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="temp"></div>
     </main>
+
     <footer>
-        <img src="./img/Github.png" alt="" width="26px">
-        <a href="https://github.com/VittorMiranda" target="_blank">@VittorMiranda</a>
+      <img src="./img/Github.png" alt="GitHub" width="26" />
+      <a href="https://github.com/VittorMiranda" target="_blank">@VittorMiranda</a>
     </footer>
-    </div>
+  </div>
+
+  <script src="scripts/forms.js"></script>
+  <script src="scripts/menu.js"></script>
 </body>
-<script src="scripts/forms.js"></script>
-<script src="scripts/menu.js"></script>
 </html>
