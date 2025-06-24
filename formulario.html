@@ -30,12 +30,12 @@
       <form action="#" class="form" onsubmit="dados(event)">
         <div class="form-group">
           <label for="nome">Nome:</label>
-          <input type="text" name="nome" id="nome" class="nome" />
+          <input type="text" name="nome" id="nome" class="nome" required/>
         </div>
 
         <div class="form-group">
           <label for="data-atualizacao">Data da atualização:</label>
-          <input type="date" name="data" id="data-atualizacao" class="data-atualizacao" />
+          <input type="date" name="data" id="data-atualizacao" class="data-atualizacao" required/>
         </div>
 
         <fieldset class="form-group">
@@ -56,12 +56,12 @@
 
         <div class="form-group">
           <label for="informacoes">Informações:</label>
-          <textarea name="informacoes" id="informacoes" class="informacoes" rows="5"></textarea>
+          <textarea name="informacoes" id="informacoes" class="informacoes" rows="5" required></textarea>
         </div>
 
         <div class="form-group">
           <label for="upload">Upload da Imagem: JPEG* PNG*</label>
-          <input type="file" name="upload" id="upload" class="upload" accept="image/jpeg, image/png" />
+          <input type="file" name="upload" id="upload" class="upload" accept="image/jpeg, image/png" required/>
         </div>
 
         <button type="submit">Enviar</button>
