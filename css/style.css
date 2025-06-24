@@ -64,11 +64,10 @@ main {
 }
 
 video {
-    width: 100%;
+    width: 80%;
     height: auto;
     z-index: -1;
     position: relative;
-    pointer-events: none;
 }
 
 footer {
@@ -315,7 +314,7 @@ button:hover {
     * {
         font-size: 16px;            
     }
-    
+
     nav {
         justify-content: flex-start !important;
     }
